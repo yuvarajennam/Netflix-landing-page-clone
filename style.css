@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("assets/netflix-bg.png") center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.8)
+  );
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 16px;
+  
+}
+
+.lang {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #aaa;
+  padding: 6px 12px;
+  border-radius: 5px;
+    cursor: pointer;
+}
+
+.signin {
+  background: #e50914;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  text-align: center;
+  margin-top: 120px;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.hero-text h2 {
+  margin: 16px 0;
+  font-size: 1.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+.email-form {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+
+}
+
+.email-form input {
+  padding: 16px;
+  width: 350px;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid #666;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.email-form button {
+  padding: 16px 24px;
+  background: #e50914;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.faq {
+  padding: 60px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.faq-item {
+  background: #2d2d2d;
+  padding: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.footer {
+  padding: 40px;
+  color: #aaa;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.region {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .email-form {
+    flex-direction: column;
+  }
+
+  .email-form input {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+.trending {
+  padding: 60px 40px;
+}
+
+.trending h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+.trending-row {
+  display: flex;
+  gap: 20px;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.trending-row::-webkit-scrollbar {
+  
+  display: flex;
+  gap: 20px;
+
+  overflow-x: auto;
+  padding-bottom: 10px;
+
+  width: 100%;
+  scroll-padding-left: 60px;
+  scroll-padding-right: 60px;
+
+}
+.trend-card {
+  position: relative;
+  min-width: 160px;
+  margin-left: 60px;
+}
+
+.trend-card img {
+  width: 160px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.rank {
+  position: absolute;
+  left: -20px;
+  bottom: 10px;
+
+  font-size: 6rem;
+  font-weight: 800;
+
+  color: black;
+  -webkit-text-stroke: 2px white;
+  z-index: 1;
+  margin-left: 10px;
+}
+.trend-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+@media (max-width: 768px) {
+  .trend-card img {
+    width: 120px;
+    height: 180px;
+  }
+
+  .rank {
+    font-size: 4.5rem;
+  }
+}
+.trending {
+  padding: 60px 0;
+}
+
+.trending-container {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+
+.trending-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
